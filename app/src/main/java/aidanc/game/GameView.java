@@ -1,6 +1,7 @@
 package aidanc.game;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.util.Log;
@@ -15,6 +16,9 @@ import android.view.SurfaceView;
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     private final static String TAG = "GameView";
+
+    public final static int SCREEN_WIDTH = Resources.getSystem().getDisplayMetrics().widthPixels;
+    public final static int SCREEN_HEIGHT = Resources.getSystem().getDisplayMetrics().heightPixels;
 
     private GameThread gameThread;
     private GameEngine gameEngine;
